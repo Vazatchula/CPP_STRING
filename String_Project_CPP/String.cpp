@@ -10,7 +10,7 @@ using namespace std;
 
 
 String::String() {
-	cout << "--- string constructor: " << " ---" << endl;
+	cout << "+++ string constructor +++" << endl;
 	
 	strNew = new char[0];
 }
@@ -21,7 +21,7 @@ String::~String() {
 }
 
 String::String(const String& other) {
-	cout << "--- string copy ---" << endl;
+	cout << "+++ string copy +++" << endl;
 
 	size_t size;
 	size = strlen(other.strNew);
@@ -33,7 +33,7 @@ String::String(const String& other) {
 }
 
 String::String(const char* str) {
-	cout << "--- string const: " << str << " ---" << endl;
+	cout << "+++ string const: " << str << " +++" << endl;
 	
 	size_t size;
 	size = strlen(str);
@@ -43,30 +43,38 @@ String::String(const char* str) {
 
 }
 
-size_t String::Length(char* name) const {
-	cout << "--- length operator ---" << endl;
-	int length = strlen(name);
-	cout << length;
+size_t String::Length() const // writes the length of the string's char array
+{
+	cout << "\n--- length? operator ---" << endl;
+	int length = strlen(strNew);
+	cout << "length of " << strNew << " is: " << length << endl;
 	return length;
 }
 
-//char& String::CharacterAt(size_t index)
-//{
-//	// TODO: insert return statement here
-//}
-
-const char& String::CharacterAt(char* input, size_t index) const
+char& String::CharacterAt(size_t index)
 {
-	cout << input[index];
-	return input[index];
+	cout << "\n--- character at? function ---" << endl;
+	cout << "letter " << index << " of " << strNew << " is the character: ";
+	//cout << strlen(strNew) << endl;
+
+	if (strlen(strNew) <= 0) cout << "NO STRING INPUT";
+
+	if (strNew[index - 1] < (strlen(strNew)) || ('\0') || (strNew[index - 1] <= -1)) cout << "INVALID INPUT";
+	else cout << strNew[index - 1] << endl;;
+
+	
+	return strNew[index];
+
 }
 
-bool String::EqualTo(const String& other) {
+bool String::EqualTo(const String& other) // equality FUNCTION, different to the operator but does the same thing
+{
+	cout << "\n--- equal to? function ---" << endl;
 
 	if (strcmp(strNew, other.strNew) == 0) {
-		cout << "The Input is equal" << endl;
+		cout << "The strings are equal" << endl;
 	}
-	else cout << "The Input is not equal" << endl;
+	else cout << "The strings are not equal" << endl;
 
 	return this;
 
@@ -74,6 +82,7 @@ bool String::EqualTo(const String& other) {
 
 String& String::Append(const String& _str)
 {
+	cout << "\n--- append? function ---" << endl;
 	//strcpy(strNew, _str.strNew);
 	strcat(strNew, " ");
 	strcat(strNew, _str.strNew);
@@ -83,6 +92,7 @@ String& String::Append(const String& _str)
 
 String& String::Prepend(const String& _str)
 {
+	cout << "\n--- prepend? function ---" << endl;
 	strcat(_str.strNew, " ");
 	strcat(_str.strNew, strNew);
 	cout << _str.strNew << endl;
@@ -91,30 +101,29 @@ String& String::Prepend(const String& _str)
 
 const char* String::CStr() const
 {
-	return strNew;
+	return strNew; // collected from private class
 }
 
-String& String::ToLower(char* input)
+String& String::ToLower() // makes every char lowercase
 {
-	for (size_t i = 0; i < strlen(input); i++) {
+	for (size_t i = 0; i < strlen(strNew); i++) {
 
-		input[i] = tolower(input[i]);
+		strNew[i] = tolower(strNew[i]);
 	}
 			
-	cout << "lowercase: " << input << endl;
+	cout << "Lowercase: " << strNew << endl;
 	
 	return *this;
-
 }
 
-String& String::ToUpper(char* input)
+String& String::ToUpper() // makes every char UPPERCASE
 {
-	for (size_t i = 0; i < strlen(input); i++) {
+	for (size_t i = 0; i < strlen(strNew); i++) {
 
-		input[i] = toupper(input[i]);
+		strNew[i] = toupper(strNew[i]);
 	}
 
-	cout << "uppercase: " << input << endl;
+	cout << "Uppercase: " << strNew << endl;
 
 	return *this;
 }
@@ -123,48 +132,58 @@ String& String::ToUpper(char* input)
 //{
 //	return size_t();
 //}
-//
+
 //size_t String::Find(size_t _startIndex, const String& _str)
 //{
 //	return size_t();
 //}
-//
+
 //String& String::Replace(const String& _find, const String& _replace)
 //{
 //	// TODO: insert return statement here
 //}
-//
+
 //String& String::ReadFromConsole()
 //{
 //	// TODO: insert return statement here
 //}
-//
+
 //String& String::WriteToConsole()
 //{
 //	// TODO: insert return statement here
 //}
-//
-bool String::operator==(const String& _other)
+
+bool String::operator==(const String& _other) // operator overload for equality ('==')
 {
-	return this;
+	if (strcmp(strNew, _other.strNew) == 0) return true;
+
+	else return false;
 }
 
-bool String::operator!=(const String& _other)
+bool String::operator!=(const String& _other) // operator overload for inequality ('!=')
 {
-	return this;
+	if (strcmp(strNew, _other.strNew) != 0) return true;
+
+	else return false;
 }
 
-String& String::operator=(const String& _str)
+String& String::operator=(const String& _str) // operator overload for assignment ('=')
 {
+	strcpy(strNew, _str.strNew);
 	return *this;
 }
 
-//char& String::operator[](size_t _index)
-//{
-//	// TODO: insert return statement here
-//}
-//
-//const char& String::operator[](size_t _index) const
-//{
-//	// TODO: insert return statement here
-//}
+char& String::operator[](size_t index)
+{
+	
+	if (strlen(strNew) <= 0) cout << "NO STRING INPUT";
+
+	if (strNew[index - 1] < (strlen(strNew)) || ('\0') || (strNew[index - 1] <= -1)) cout << "INVALID INPUT";
+	else cout << strNew[index - 1];
+
+
+	return strNew[index];
+}
+
+
+

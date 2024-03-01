@@ -5,15 +5,22 @@
 #include "String.h"
 using namespace std;
 
+
 int main()
 {
-    char input[12];
-    char input2[12];
+   
+    
+    String* hello = new String("Hello");
+    String* world = new String("World");
 
+    //test->ToUpper();
+    //test2->ToLower();
+
+    //test2->Length();
 
    //char name[12];
 
-    String* str_01 = new String();
+    
     //cin >> name;
 
 
@@ -21,35 +28,25 @@ int main()
 
     /////////finding length of an input /////////
 
-    /*str_01->Length(name); */
+    hello->Length();
+    world->Length();
 
 
 
     
 
     /////// finding a letter in a word ////////////
-    /*int val = 3;
     
-    cin >> input;
-
-    cin >> val;
-
-    str_01->CharacterAt(input, val);*/
-
-
+    hello->CharacterAt(3);
+    world->CharacterAt(2);
 
 
     ////// equality ////////////
 
-    //cin >> input;
-    //cin >> input2;
+    // hello = world; // copies 'World' onto the hello string and makes them the same
+    hello->EqualTo(*world); // false! 'Hello' and 'World' are not the same
+
     
-
-    //str_01->EqualTo(input);
-
-
-
-
     /////// lowercase|UPPERCASE ////////////
 
     //cin >> input;
@@ -58,41 +55,54 @@ int main()
     //str_01->ToUpper(input);
 
 
-
-
     ////// append //////////
 
-    String* test = new String("one");
-    String* test2 = new String("TWO");
+    /*hello->Append(*world);*/
 
-    //test->Append(*test2); // comment out for prepend
-
-    //////// prepend /////// -- using the above code --
-
-    // test->Prepend(*test2);
+    // uncomment individually for testing purposes
 
 
+    //////// prepend /////// 
 
-
-    //////// equal to /////////////
-
-    // test->EqualTo(*test2);
+    /*hello->Prepend(*world);*/
+    
+    // uncomment individually for testing purposes
      
-
-
-
     ///// CStr ////////////////
-    cout << test->CStr();
+    cout << "--- CStr ---" << endl;
+    cout << hello->CStr() << endl; // returns the string content, but collects it from the private string class
+    cout << world->CStr() << endl;
 
 
 
+    
+    ////// OPERATORS //////
+    cout << "--- operator functions ---" << endl;
 
-    ////// 
+    cout << "string1 != string2: ";
+    if (*hello != *world) cout << "Yes" << endl; // returns true, both strings are not equal
 
+    cout << "string1 == string2: ";
+    if (*hello == *world) cout << "Yes" << endl;
+    else cout << "No" << endl; // returns false, the strings are not equal
 
+    cout << "--- ASSIGNMENT OPERATOR ---" << endl;
+    *hello = *world; // copies 'test2' onto 'test1'
+
+    cout << "RERUN: string1 == string2: ";
+    if (*hello == *world) cout << "Yes" << endl; // should work now.
+
+    cout << "--- SUBSCRIPT OPERATOR ---" << endl;
+
+    cout << "string2 second letter: "; // should be 'o' from 'World'
+    (*world)[2];
+   
+    
 
 
 
 }
+
+
 
 
