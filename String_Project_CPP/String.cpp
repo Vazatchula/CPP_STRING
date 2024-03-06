@@ -4,6 +4,7 @@
 #include <iostream>
 #include <ctype.h>
 #include <string>
+#include <fstream>
 
 
 using namespace std;
@@ -143,15 +144,34 @@ String& String::ToUpper() // makes every char UPPERCASE
 //	// TODO: insert return statement here
 //}
 
-//String& String::ReadFromConsole()
-//{
-//	// TODO: insert return statement here
-//}
+String& String::ReadFromConsole()
+{
+	cout << "READING FROM FILE: " << "Hello_World.txt:" << endl;
+	fstream wordsReader("Hello_World.txt", ios::in);
+	string word;	
+	
+	while (!wordsReader.eof())
+	{
+		wordsReader >> word;
+		cout << word << " ";
+	}
+	cout << endl;
 
-//String& String::WriteToConsole()
-//{
-//	// TODO: insert return statement here
-//}
+	wordsReader.close();
+	
+	return *this;
+}
+
+String& String::WriteToConsole()
+{
+	cout << "WRITING TO FILE" << endl;
+	fstream file;
+	file.open("test.txt", ios::out);
+	file << strNew << endl;
+	file.close();
+
+	return *this;
+}
 
 bool String::operator==(const String& _other) // operator overload for equality ('==')
 {

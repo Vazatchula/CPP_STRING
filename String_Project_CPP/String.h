@@ -39,8 +39,8 @@ public:
 	
 	//	String& Replace(const String& _find, const String& _replace);
 	
-	//	String& ReadFromConsole();
-	//	String& WriteToConsole();
+		String& ReadFromConsole();
+		String& WriteToConsole();
 	
 	public:
 		bool operator==(const String& _other);

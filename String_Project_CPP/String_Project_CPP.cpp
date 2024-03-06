@@ -13,27 +13,11 @@ int main()
     String* hello = new String("Hello");
     String* world = new String("World");
 
-    //test->ToUpper();
-    //test2->ToLower();
-
-    //test2->Length();
-
-   //char name[12];
-
-    
-    //cin >> name;
-
-
-
-
     /////////finding length of an input /////////
 
     hello->Length();
-    world->Length();
+    world->Length();    
 
-
-
-    
 
     /////// finding a letter in a word ////////////
     
@@ -43,16 +27,14 @@ int main()
 
     ////// equality ////////////
 
-    // hello = world; // copies 'World' onto the hello string and makes them the same
+    // hello = world; // copies 'World' onto the hello string and makes them the same. Returns true
     hello->EqualTo(*world); // false! 'Hello' and 'World' are not the same
 
     
     /////// lowercase|UPPERCASE ////////////
 
-    //cin >> input;
-
-    //str_01->ToLower(input);
-    //str_01->ToUpper(input);
+    //hello->ToLower(input);
+    //world->ToUpper(input);
 
 
     ////// append //////////
@@ -74,6 +56,10 @@ int main()
     cout << world->CStr() << endl;
 
 
+    ////// write to console ////////
+    cout << "--- Reading | Writing ---" << endl;
+    hello->WriteToConsole(); // writes "Hello" in the file 'test.txt'
+    world->ReadFromConsole();
 
     
     ////// OPERATORS //////
