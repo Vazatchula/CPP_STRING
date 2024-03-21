@@ -129,20 +129,46 @@ String& String::ToUpper() // makes every char UPPERCASE
 	return *this;
 }
 
-//size_t String::Find(const String& _str)
-//{
-//	return size_t();
-//}
+size_t String::Find(const String& _str)
+{
+	cout << "--- FIND ---" << endl;
 
-//size_t String::Find(size_t _startIndex, const String& _str)
-//{
-//	return size_t();
-//}
+	char* found = strstr(strNew, _str.strNew);
 
-//String& String::Replace(const String& _find, const String& _replace)
-//{
-//	// TODO: insert return statement here
-//}
+	if (found == nullptr) return -1;
+
+	return found - strNew;
+}
+
+size_t String::Find(size_t _startIndex, const String& _str)
+{
+
+	cout << "--- FIND (INDEX) ---" << endl;
+
+	if ((_startIndex < 0) || (_startIndex >= strlen(strNew))) return -1;
+
+	char* foundIndexed = strstr(strNew + _startIndex, _str.strNew);
+
+	if (foundIndexed == nullptr) return -1;
+
+	return foundIndexed - strNew;
+}
+
+String& String::Replace(const String& _find, const String& _replace)
+{
+
+	cout << "--- REPLACE ---" << endl;
+
+	size_t replace = 0;
+
+	while (replace != -1) {
+		replace = Find(replace, _find.strNew);
+
+		strNew[replace] = *_replace.strNew;
+	}
+
+	return *this;
+}
 
 String& String::ReadFromConsole()
 {

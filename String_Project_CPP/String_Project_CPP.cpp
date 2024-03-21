@@ -49,6 +49,13 @@ int main()
     /*hello->Prepend(*world);*/
     
     // uncomment individually for testing purposes
+
+    ////// find string /////////////
+
+    hello->Find(*world);
+
+
+
      
     ///// CStr ////////////////
     cout << "--- CStr ---" << endl;
