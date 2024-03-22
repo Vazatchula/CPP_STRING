@@ -1,6 +1,2 @@
-﻿  String.cpp
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_STRING\String_Project_CPP\String.cpp(50,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  String_Project_CPP.cpp
-  Generating Code...
-  LINK : C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_STRING\String_Project_CPP\x64\Debug\String_Project_CPP.exe not found or not built by the last incremental link; performing full link
+﻿  String_Project_CPP.cpp
   String_Project_CPP.vcxproj -> C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_STRING\String_Project_CPP\x64\Debug\String_Project_CPP.exe

@@ -8,10 +8,14 @@ using namespace std;
 
 int main()
 {
-   
+    String* backupHello = new String("Hello");
+    String* backupWorld = new String("World");
     
     String* hello = new String("Hello");
     String* world = new String("World");
+    
+    hello = backupHello;
+    world = backupWorld;
 
     /////////finding length of an input /////////
 
@@ -33,20 +37,27 @@ int main()
     
     /////// lowercase|UPPERCASE ////////////
 
-    //hello->ToLower(input);
-    //world->ToUpper(input);
+    hello->ToLower();
+    world->ToUpper();
 
+    hello = backupHello;
+    world = backupWorld;
 
     ////// append //////////
 
-    /*hello->Append(*world);*/
+    hello->Append(*world);
+
+    hello = backupHello;
+    world = backupWorld;
 
     // uncomment individually for testing purposes
 
 
     //////// prepend /////// 
 
-    /*hello->Prepend(*world);*/
+    hello->Prepend(*world);
+
+
     
     // uncomment individually for testing purposes
 
@@ -54,8 +65,18 @@ int main()
 
     hello->Find(*world);
 
+    hello = backupHello;
+    world = backupWorld;
 
+    hello->Replace(*hello, *world);
 
+    hello = backupHello;
+    world = backupWorld;
+
+    hello->Find(1, *world);
+
+    hello = backupHello;
+    world = backupWorld;
      
     ///// CStr ////////////////
     cout << "--- CStr ---" << endl;

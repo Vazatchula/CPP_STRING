@@ -137,6 +137,7 @@ size_t String::Find(const String& _str)
 
 	if (found == nullptr) return -1;
 
+		
 	return found - strNew;
 }
 
@@ -161,11 +162,11 @@ String& String::Replace(const String& _find, const String& _replace)
 
 	size_t replace = 0;
 
-	while (replace != -1) {
+	
 		replace = Find(replace, _find.strNew);
 
 		strNew[replace] = *_replace.strNew;
-	}
+	
 
 	return *this;
 }
