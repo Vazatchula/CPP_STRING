@@ -1,0 +1,112 @@
+
+
+Thu Mar 28 00:27:13 2024
+
+Length operator SUCCESS
+Length operator SUCCESS
+Character At operator SUCCESS
+Character At operator SUCCESS
+Equal To operator FAIL
+Lowercase operator SUCCESS
+Uppercase operator SUCCESS
+Append operator SUCCESS
+Prepend operator SUCCESS
+Find operator FAIL
+CStr operator SUCCESS
+Write to Console operator SUCCESS
+Read to Console operator SUCCESS
+!= operator SUCCESS
+== operator FAIL
+= operator SUCCESS
+== operator SUCCESS
+Subscript operator SUCCESS
+84% SUCCESS RATE
+10% FAIL RATE
+
+ 
+ 
+
+
+
+Thu Mar 28 00:27:20 2024
+
+Length operator SUCCESS
+Length operator SUCCESS
+Character At operator SUCCESS
+Character At operator SUCCESS
+Equal To operator FAIL
+Lowercase operator SUCCESS
+Uppercase operator SUCCESS
+Append operator SUCCESS
+Prepend operator SUCCESS
+Find operator FAIL
+CStr operator SUCCESS
+Write to Console operator SUCCESS
+Read to Console operator SUCCESS
+!= operator SUCCESS
+== operator FAIL
+= operator SUCCESS
+== operator SUCCESS
+Subscript operator SUCCESS
+84% SUCCESS RATE
+10% FAIL RATE
+
+ 
+ 
+
+
+
+Thu Mar 28 00:29:31 2024
+
+Length operator SUCCESS
+Length operator SUCCESS
+Character At operator SUCCESS
+Character At operator SUCCESS
+Equal To operator FAIL
+Lowercase operator SUCCESS
+Uppercase operator SUCCESS
+Append operator SUCCESS
+Prepend operator SUCCESS
+Find operator FAIL
+CStr operator SUCCESS
+Write to Console operator SUCCESS
+Read to Console operator SUCCESS
+!= operator SUCCESS
+== operator FAIL
+= operator SUCCESS
+== operator SUCCESS
+Subscript operator SUCCESS
+88% SUCCESS RATE
+11% FAIL RATE
+
+ 
+ 
+
+
+
+Thu Mar 28 00:31:14 2024
+
+Length operator SUCCESS
+Length operator SUCCESS
+Character At operator SUCCESS
+Character At operator SUCCESS
+Equal To operator FAIL
+Lowercase operator SUCCESS
+Uppercase operator SUCCESS
+Append operator SUCCESS
+Prepend operator SUCCESS
+Find operator FAIL
+CStr operator SUCCESS
+Write to Console operator SUCCESS
+Read to Console operator SUCCESS
+!= operator SUCCESS
+== operator FAIL
+= operator SUCCESS
+== operator SUCCESS
+Subscript operator SUCCESS
+89% SUCCESS RATE
+11% FAIL RATE
+
+ 
+ 
+
