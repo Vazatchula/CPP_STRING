@@ -51,20 +51,20 @@ int main()
 
     //cin >> input;
 
-    //str_01->ToLower(input);
-    //str_01->ToUpper(input);
+    hello->ToLower();
+    world->ToUpper();
 
 
     ////// append //////////
 
-    /*hello->Append(*world);*/
+    hello->Append(*world);
 
     // uncomment individually for testing purposes
 
 
     //////// prepend /////// 
 
-    /*hello->Prepend(*world);*/
+    hello->Prepend(*world);
     
     // uncomment individually for testing purposes
      
